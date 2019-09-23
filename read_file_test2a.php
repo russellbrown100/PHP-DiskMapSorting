@@ -1,5 +1,17 @@
 <?php
 
+	/*
+	
+	The problem that I find myself in over and over again is that I don't have enough ram to process the data.  
+	The amount of ram limits the amount of memory that I can read in from a file and apply whatever algorithms 
+	I need to to perform sorting and arithmetic tasks. The solution I had come up with to combat this problem
+	is to actually sort the data in chunks and not as a whole file.  So, a block of data is read, a sorting 
+	algorithm is applied to the data, then the sorted data is saved back to disk.  And this process will be 
+	repeated over again until the whole file is read.  And when the data is saved back to disk it can be
+	indexed on a per block basis to make it faster for searching.
+	
+	*/
+
 
 	function split_string($string, $separator)
 	{
